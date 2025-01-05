@@ -17,4 +17,5 @@ def checkName(subjectName,subjectStatus):
     else:
         # add the name in the list if the previous one had entered the scanctuary
         peopleName.append(subjectName)
+        
     return
