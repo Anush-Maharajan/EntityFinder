@@ -5,8 +5,7 @@ def subjectEnter():
     # Randomly select a name and age from the lists
     subjectAge = random.choice(peopleAge)
     subjectName = random.choice(peopleName)
-
-    return subjectName, subjectAge
+    subjectStatus = random.choice(["human", "entity"])
 
 def checkName(subjectName,subjectStatus):
     peopleName = []
@@ -17,5 +16,7 @@ def checkName(subjectName,subjectStatus):
     else:
         # add the name in the list if the previous one had entered the scanctuary
         peopleName.append(subjectName)
-        
-    return
+
+    return subjectName
+
+

@@ -10,10 +10,10 @@ def main():
           Your decisions is essential for the survival of the people in the sanctuary. Good luck!\n\n\n""")
     
     playCount = random.randint(2, 6)
-    peopleEntered = {}
     while(playCount > 0):
         playCount -= 1
-        subjectName, subjectAge = subjectEnter()
+        subjectName, subjectAge, subjectStatus = subjectEnter()
+        subRel = dict(zip(subjectName, subjectStatus))
         checkName(subjectName)
         decisionInput()
 
