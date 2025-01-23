@@ -1,5 +1,5 @@
 from Decision import decisionInput
-from subjectEnter import subjectEnter, checkName
+import subjectEnter
 import random
 
 
@@ -12,9 +12,11 @@ def main():
     playCount = random.randint(2, 6)
     while(playCount > 0):
         playCount -= 1
-        subjectName, subjectAge, subjectStatus = subjectEnter()
+        subjectName = subjectEnter.subjectName()
+        subjectAge = subjectEnter.subjectAge()
+        subjectStatus = subjectEnter.subjectStatus()
         subRel = dict(zip(subjectName, subjectStatus))
-        checkName(subjectName)
+        subjectEnter.checkName(subjectName)
         decisionInput()
 
 if __name__ == "__main__":

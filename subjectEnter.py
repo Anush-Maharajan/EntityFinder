@@ -1,11 +1,14 @@
 import random
 from PeopleList import peopleAge, peopleName
 
-def subjectEnter():
-    # Randomly select a name and age from the lists
-    subjectAge = random.choice(peopleAge)
-    subjectName = random.choice(peopleName)
-    subjectStatus = random.choice(["human", "entity"])
+def subjectName():
+    return random.choice(peopleName)
+
+def subjectAge():
+    return random.choice(peopleAge)
+
+def subjectStatus():
+    return random.choice(["human", "entity"])
 
 def checkName(subjectName,subjectStatus):
     peopleName = []
